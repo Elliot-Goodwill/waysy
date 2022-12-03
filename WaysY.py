@@ -52,7 +52,7 @@ while test != 'y' and test != 'n':
     print('[!] Error')
     test = input('[_] Test a speed?(y/n): ') 
 if test == 'y':
-    print('[~] You chose option y')
+    print('[~] Your chose option y')
     t1 = time.time()
     by_charstest(inp, 5)
     t2 = time.time()
