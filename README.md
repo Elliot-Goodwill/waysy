@@ -1,5 +1,5 @@
 # waysy
-Generates a wordlist from the given symbols.
+Generates a wordlist from given symbols.
 
 Works in linux.
 [Installation]
