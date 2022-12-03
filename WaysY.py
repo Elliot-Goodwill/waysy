@@ -52,7 +52,7 @@ while test != 'y' and test != 'n':
     print('[!] Error')
     test = input('[_] Test a speed?(y/n): ') 
 if test == 'y':
-    print('[~] Your chose option y')
+    print('[~] You chose option y')
     t1 = time.time()
     by_charstest(inp, 5)
     t2 = time.time()
@@ -63,7 +63,7 @@ if test == 'y':
     print(result*(len(inp)**inp1))
 else:
     print('[~] You chose option n')
-check = input('[~] You choices were:    \n1.Symbols: %s \n2.Length:  %s \n3.Filename: %s \n[_] Continue?(y/n): ' %(inp, str(inp1), file_name)) 
+check = input('[~] Your choices were:    \n1.Symbols: %s \n2.Length:  %s \n3.Filename: %s \n[_] Continue?(y/n): ' %(inp, str(inp1), file_name)) 
 while check != 'y' and check != 'n':
     print('[!] Error')
     check = input('[_] Continue?(y/n)')
