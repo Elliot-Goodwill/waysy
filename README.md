@@ -17,7 +17,7 @@ python waysy.py #execution
 
 ***Interface***
 
-![12122sdhdhdvghfsfduguyvesadsa](https://user-images.githubusercontent.com/107361374/205445238-0a9c8b7b-0927-4a20-af59-6e9957d076f8.png)
+![5555](https://user-images.githubusercontent.com/107361374/205445778-805d0f92-892e-436c-be7d-8f6cae2a9aa4.png)
 
 ***Wordlist part example***
 
