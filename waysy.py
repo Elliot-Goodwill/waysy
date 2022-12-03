@@ -2,44 +2,24 @@ import os
 from progress.bar import IncrementalBar
 import time
 file_name = ''
-def by_chars(chars, length, filename):
+def by_chars(chars, length, filename, test):
     os.system('touch ' + filename + '.txt')
-    ch = list(chars)
+    dt = list(chars)
     w = ''
     t = ''
-    quantity = len(ch)**length
+    quantity = len(dt)**length
     bar = IncrementalBar('Bar', max = quantity)
     with open(filename + '.txt', 'a') as wl:
         for i in range(quantity):
             for r in range(length):
-                t += ' ' + str((i//len(chars)**r)%len(chars))
-            y = t.split()
-            for k in range(length):
-                w += ch[int(y[k])]
+                w += dt[(i//len(chars)**r)%len(chars)]
             wl.write(w + '\n')
             t = ''
             w = ''
             bar.next()
+    if test == '1':
+        os.system('rm ' + filename + '.txt')
             
-def by_charstest(chars, length):
-    ch = list(chars)
-    os.system('touch test.txt')
-    w = ''
-    t = ''
-    quantity = len(ch)**length
-    bar = IncrementalBar('Bar', max = quantity)
-    with open('test.txt', 'a') as wl:
-        for i in range(quantity):
-            for r in range(length):
-                t += ' ' + str((i//len(chars)**r)%len(chars))
-                y = t.split()
-            for k in range(length):
-                w += ch[int(y[k])]
-            wl.write(w + '\n')
-            t = ''
-            w = ''
-            bar.next()
-    os.system('rm test.txt')
 
 name = '         __      __           __   __\n         \ \    / /_ _ _  _ __\ \ / /\n          \ \/\/ / _` | || (_-<\ V /\n           \_/\_/\__,_|\_, /__/ |_|\n                       |__/'
 print(name + '\n by Évariste Galois\n')
@@ -54,7 +34,7 @@ while test != 'y' and test != 'n':
 if test == 'y':
     print('[~] You chose option y')
     t1 = time.time()
-    by_charstest(inp, 5)
+    by_chars(inp, 5, 'test', 1)
     t2 = time.time()
     print('\n[~] Your result is(sec per word):  ')
     result = (t2-t1)/(len(inp)**5)
@@ -68,7 +48,7 @@ while check != 'y' and check != 'n':
     print('[!] Error')
     check = input('[_] Continue?(y/n)')
 if check == 'y':
-    by_chars(inp, inp1, file_name)
+    by_chars(inp, inp1, file_name, 0)
     print('[done]')
 elif check == 'n':
     print('[bye]')
